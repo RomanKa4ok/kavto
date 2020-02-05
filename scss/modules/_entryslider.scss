@@ -1,0 +1,187 @@
+.entry-slider {
+	background: grey;
+
+	&__container {
+		height: 88vh;
+		overflow: hidden;
+		margin-bottom: 0;
+		
+		@media (max-height: $pro-height) and (max-width: $ipad-height) {
+			height: 40vh;
+		}
+		@media (max-width: $ipad-height) and (max-height: $width-md) {
+			height: 88vh;
+		}
+		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+			height: 40vh;
+		}
+		
+
+
+	}
+	&__wrapper {
+		color: #fff;
+		height: 100%;
+		padding: 100px 100px;
+		@media (min-height: $pro-height) and (max-width: $ipad-height) {
+		padding: 50px;
+		}
+		@media (max-height: $pro-height) and (max-width: $pro-height) {
+		padding: 40px;
+		padding-bottom: 50px;
+		}
+		@media (max-height: $ipad-height) and (max-width: $width-sm) {
+			padding:0 20px 30px 20px ;
+		}
+		
+
+		
+		
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			@include pos($t:0, $l:0);
+			
+			background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 1%, rgba(0,0,0,0.3) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1) 1%,rgba(0,0,0,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1) 1%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#4d000000',GradientType=0 ); /* IE6-9 */
+
+
+
+		}
+
+		
+		&--first {
+			background: url('../images/slide1.jpg') no-repeat bottom center;
+			background-size: cover;
+			
+		}
+		&--second {
+			background: url('../images/slide2.jpg') no-repeat center center;
+			background-size: cover;
+			
+		}
+		&--third {
+			background: url('../images/slide3.jpg') no-repeat center center;
+			background-size: cover;
+			
+		}
+	}
+	&__title {
+		font-size: 3rem;
+		text-transform: uppercase;
+		z-index: 20;
+		position: relative;
+		margin-bottom: 40px;
+
+
+		@media (max-width: $pro-height ) {
+			font-size: 2.2rem;
+		}
+		@media (min-height: $ipad-height) and (max-width: $width-md) {
+			font-size: 2rem;
+			margin-bottom: 30px;
+		}
+		@media (max-height: $pro-height) and (max-width: $width-md) {
+			font-size: 1.5rem;
+			margin-bottom: 20px;
+		}
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+			font-size: 1.5rem;
+			margin-bottom: 25px;
+		}
+		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+			font-size: 0.8rem;
+			margin-bottom: 10px;
+		}
+		&-highlight {
+			position: relative;
+			&::after {
+			content: '';
+			@include pos($b:-15px, $l:0);
+			background: $red;
+			height: 5px;
+			width: 100%;
+			@media (max-height: $pro-height) and (max-width: $width-md) {
+				@include pos($b:-5px, $l:0);
+			}
+			}
+		}
+		&-wrap {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		// &::after {
+		// 	content: '';
+		// 	@include pos($b:0, $l:0);
+		// 	background: $red;
+		// 	height: 5px;
+		// 	width: 100%;
+		// }
+	}
+	&__desc {
+		z-index: 20;
+		position: relative;
+		font-size: 2.5rem;
+		opacity: .8;
+		line-height: 3rem;
+		// text-align: justify;
+		@media (max-width: $pro-height) {
+			font-size: 2rem;
+			line-height: 2rem;
+		}
+		@media (min-height: $ipad-height) and (max-width: $width-md) {
+			font-size: 1.5rem;
+		}
+		@media (max-height: $pro-height) and (max-width: $width-md) {
+			font-size: 1.2rem;
+			line-height: 1.2rem;
+		}
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+			font-size: 1.5rem;
+			margin-bottom: 25px;
+			line-height: 1.3rem;
+		}
+		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+			font-size: 0.8rem;
+			line-height: 1rem;
+			margin-bottom: 0;
+		}
+		 strong {
+		 	font-weight: 700;
+		 	color: $red;
+		 }
+	}
+	&__arrow {
+		&-item-prev {
+			@include pos($t:50%, $l: 0);
+			// @media (min-height: $pro-height) and (max-width: $ipad-height) {
+			// 	@include pos($t:25%, $l: 0);
+			// }
+			// @media (min-height: $ipad-height) and (max-width: $width-md) {
+			// 	@include pos($t:25%, $l: 0);
+			// }
+			@media (max-height: $pro-height) and (max-width: $width-md) {
+			@include pos($t:25%, $l: 0);
+			}
+		}
+		&-item-next {
+			@include pos($t:50%, $r: 0);
+			// @media (min-height: $pro-height) and (max-width: $ipad-height) {
+			// 	@include pos($t:25%, $r: 0);
+				
+			// }
+			// @media (min-height: $ipad-height) and (max-width: $width-md) {
+				
+				
+			// }
+			@media (max-height: $pro-height) and (max-width: $width-md) {
+			@include pos($t:25%, $r: 0);
+			}
+		}
+	}
+}

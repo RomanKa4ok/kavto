@@ -1,0 +1,134 @@
+.feedback {
+	background: $dark;
+
+	&__wrap {
+		background: #fff;
+		padding: 50px 5%;
+		border-left: 5px solid #df0708;
+		border-right: 5px solid #df0708;
+	}
+	&__title {
+		text-align: center;
+		font-size: 2.5em;
+		font-weight: 700;
+		margin-bottom: 40px;
+		@media (max-height:$ipad-height) and (max-width: $width-sm) {
+			font-size: 1.5rem;	
+				}
+		span {
+			position: relative;
+			&::after {
+				content: 'Последние сделки';
+				color: $dark;
+				@include pos($b: -10px, $r :0);
+				width: 100%;
+				text-align: right;
+				font-weight: 400;
+				font-style: italic;
+				font-size: 1rem;
+				opacity: .7;
+				@media (max-height:$ipad-height) and (max-width: $width-sm) {
+
+				}
+
+			}
+			&::before {
+				content: '';
+				width: 5px;
+				background: $red;
+				height: 100%;
+				@include pos($b: -8px, $r : -20px);
+				@media (max-height:$ipad-height) and (max-width: $width-sm) {
+				background: #fff;	
+				}
+			}
+		}
+	}
+	&__slider {
+		.slick-dots li {
+			@include size(20px);
+			background: transparent;
+			border-radius: 50%;
+			border: 3px solid $red;
+			transition: .3s;
+		}
+		.slick-dots li.slick-active {
+			background: $red;
+			pointer-events: none;
+		}
+
+		color: $dark;
+		&-slide {
+			padding: 20px 1%;
+			@media (max-width: $ipad-height) and (max-height: $ipad-height) {
+			margin-bottom: 40px;
+			padding: 0;
+		}
+		}
+		&-wrap {
+			display: flex;
+			width: 100%;
+			@media (max-height: $ipad-height) and (max-width: $width-sm) {
+				flex-direction: column;
+			}
+		}
+		&-auto-wrap {
+			width: 35%;
+			@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				margin-bottom: 30px;
+			}
+		}
+		&-auto-img {
+			width: 80%;
+			border: 3px solid $red;
+			@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+				width: 70%;
+				border: 3px solid transparent;
+			}
+		}
+		&-info-wrap {
+			width: 65%;
+			text-align: right;
+			@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+				flex-direction: column;
+				width: 100%;
+				padding: 0 5px;
+			}
+		}
+		&-info-name {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+		&-info-car {
+			font-size: 2rem;
+			opacity: .7;
+			text-transform: uppercase;
+		}
+		&-info-mileage {
+			font-size: 1.2rem;
+			font-weight: 700;
+			span {
+				color: $red;
+			}
+		}
+		&-name-wrap {
+			margin-bottom: 20px;
+			margin-right: 20px;
+			position: relative;
+			&::after {
+				content: '';
+				background: $red;
+				height: 100%;
+				width: 5px;
+				@include pos($t:0, $r:-20px);
+			}
+		}
+		&-desc {
+			font-size: 1.2rem;
+			text-align: justify;
+		}
+	}
+}

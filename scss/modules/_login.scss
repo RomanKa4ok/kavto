@@ -1,0 +1,88 @@
+.login {
+	background: #fff;
+	min-height: calc(100vh - 210px);
+	border-left: 5px solid #df0708;
+	border-right:5px solid #df0708;
+	&__form {
+		width: 40%;
+		@media (max-width: $width-md) and (max-height: $ipad-height) {
+			width: 70%;
+		}
+		&-wrap {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: calc(100vh - 210px);
+			@media (max-width: $width-md) and (max-height: $ipad-height) {
+				min-height: calc(100vh - 115px);
+			}
+			@media (max-width: $iphonex-landscape + 30px) and (max-height: 430px) {
+				min-height: calc(100vh - 55px);
+			}
+		}
+
+	}
+	&__title {
+		text-align: center;
+		padding: 0 0 50px 0;
+		font-size: 2rem;
+		font-weight: 700;
+		@media (max-width: $width-sm) {
+			font-size: 1.6rem;
+		}
+		@media (max-height: $width-sm) and (max-width: $iphonex-landscape + 30px) {
+			padding-bottom: 10px;
+		}
+
+	}
+	&__block {
+		position: relative;
+		margin-bottom: 40px;
+		@media (max-height: $width-sm) and (max-width: $iphonex-landscape + 30px) {
+			margin-bottom: 15px;
+		}
+	}
+	&__label {
+		@include pos($l: 5px, $t: 5px);
+		cursor: pointer;
+		transition: .1s;
+		font-size: 1.5rem;
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&__input {
+		width: 100%;
+		background: none;
+		color: $dark;
+		border-bottom: 2px solid $dark;
+		padding-left: 40px;
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		transition: .2s;
+		&::placeholder {
+			color: $dark; 
+		}
+		&:focus {
+			border-bottom: 2px solid $red;
+		}
+	
+	}
+	&__error {
+		color: $red;
+		@include pos($b:-15px, $l: 0);
+	}
+	&__button {
+		width: 100%;
+		color: #fff;
+		background: $red;
+		font-size: 1.4rem;
+		padding: 20px;
+		cursor: pointer;
+		font-weight: 700;
+	}
+}
+
+.content--login {
+	background: $red;
+}

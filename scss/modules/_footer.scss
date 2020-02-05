@@ -1,0 +1,41 @@
+.footer {
+	background: $dark;
+	border-bottom: 5px solid $red;
+	min-height: 105px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	&--table {
+		background: $red;
+		@media (max-width: $width-md) and (max-height: $ipad-height) {
+			min-height: 60px;
+		}
+		@media (max-height: $width-sm) and (max-width: $iphonex-landscape + 30px) {
+			// display: none;
+		}
+
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+
+	}
+	&__item {
+		width: 33%;
+		text-align: center;
+		cite {
+			font-style: italic;
+			@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+				display: none;
+			}
+			
+		}
+
+	}
+	&__link {
+		
+		&-img {
+			@include size(50px);
+		}
+	}
+}

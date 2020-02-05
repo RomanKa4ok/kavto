@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Starter">
+	<meta name="author" content="Admin">
+	<title>KAVTO</title>
+
+	<link rel="icon" href="images/favicon.jpg">
+	<link rel="stylesheet" href="css/libs/slick.css"/>
+	<link rel="stylesheet" href="css/libs/slick-theme.css"/>
+	<link rel="stylesheet" href="css/libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+	<!-- <script src="https://kit.fontawesome.com/cf30c80347.js" crossorigin="anonymous"></script> -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<svg width="0" height="0" class="hidden">
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="right-chevron">
+			<path d="M79.093 0L48.907 30.187 146.72 128l-97.813 97.813L79.093 256l128-128z"></path>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="left-chevron">
+			<path d="M207.093 30.187L176.907 0l-128 128 128 128 30.186-30.187L109.28 128z"></path>
+		</symbol>
+	</svg>
+	<svg width="0" height="0" class="hidden">
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="break">
+			<path d="M248.327 242.768C244.373 245.581 242 250.151 242 255c0 8.276 6.724 15 15 15 4.849 0 9.419-2.373 12.231-6.328l51.39-72.294-72.294 51.39zM287 392h-62c-8.276 0-15 6.724-15 15s6.724 15 15 15h62c8.276 0 15-6.724 15-15s-6.724-15-15-15z" fill="#df0708"></path>
+			<path d="M257 0C116.39 0 0 114.39 0 255s114.39 257 255 257 257-116.39 257-257S397.61 0 257 0zm30 452h-62c-24.814 0-45-20.186-45-45s20.186-45 45-45h62c24.814 0 45 20.186 45 45s-20.186 45-45 45zm107.827-57.173c-5.859 5.859-15.352 5.859-21.211 0l-21.211-21.211c-5.859-5.859-5.859-15.352 0-21.211s15.352-5.859 21.211 0l10.137 10.137c21.542-25.759 33.924-59.184 36.947-92.542H407c-8.291 0-15-6.709-15-15s6.709-15 15-15h14.24c-3.01-33.204-15.886-63.567-35.684-88.182l-91.862 129.227C285.257 292.91 271.546 300 257 300c-24.814 0-45-20.186-45-45 0-14.546 7.09-28.257 18.955-36.694l129.227-91.862c-23.403-18.823-52.001-31.389-83.296-35.168A163.19 163.19 0 0 0 272 90.76V105c0 8.291-6.709 15-15 15s-15-6.709-15-15V90.76c-34.243 3.105-67.497 16.663-92.507 37.522l10.102 10.102c5.859 5.859 5.859 15.352 0 21.211-5.86 5.86-15.351 5.86-21.211 0l-10.102-10.102c-20.86 25.01-34.417 56.264-37.522 90.507H105c8.291 0 15 6.709 15 15s-6.709 15-15 15H91.296c3.016 33.408 15.385 66.85 36.892 92.601l10.195-10.195c5.859-5.859 15.352-5.859 21.211 0s5.859 15.352 0 21.211l-21.27 21.27c-5.86 5.86-15.351 5.86-21.211 0C80.288 358.06 60 307.09 60 255c0-107.238 89.272-195 197-195 107.336 0 195 87.678 195 195 0 52.017-20.303 102.957-57.173 139.827z"></path>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="engine">
+			<path d="M390 211v-15c0-8.291-6.709-15-15-15h-23.789l-25.605-25.605A14.99 14.99 0 0 0 315 151h-15v-30h15c8.291 0 15-6.709 15-15s-6.709-15-15-15H165c-8.291 0-15 6.709-15 15s6.709 15 15 15h15v30h-15a14.986 14.986 0 0 0-10.605 4.395l-30 30A14.986 14.986 0 0 0 120 196v150c0 3.984 1.582 7.793 4.395 10.605l60 60A14.986 14.986 0 0 0 195 421h150a15.006 15.006 0 0 0 13.418-8.291l30-60A15.01 15.01 0 0 0 390 346h32V211h-32zm-91.582 81.709l-30 60c-3.686 7.351-12.64 10.427-20.127 6.709-7.412-3.706-10.415-12.715-6.709-20.127L260.728 301H225c-11.106 0-18.418-11.741-13.418-21.709l30-60c3.706-7.397 12.715-10.4 20.127-6.709 7.412 3.706 10.415 12.715 6.709 20.127L249.272 271H285c11.106 0 18.418 11.741 13.418 21.709zM75 181c-8.291 0-15 6.709-15 15v60H30v-60c0-8.291-6.709-15-15-15s-15 6.709-15 15v150c0 8.291 6.709 15 15 15s15-6.709 15-15v-60h30v60c0 8.291 6.709 15 15 15h15V181H75zm407 0h-15c-8.284 0-15 6.716-15 15v180c0 8.284 6.716 15 15 15h15c16.569 0 30-13.431 30-30V211c0-16.569-13.431-30-30-30z"></path>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="gauge">
+			<path d="M256 270c-8.276 0-15 6.724-15 15s6.724 15 15 15 15-6.724 15-15-6.724-15-15-15z"></path>
+			<path d="M255.998 150c-.022 0-.04.007-.062.007C183.335 150.036 121 209.257 121 285c0 74.443 60.557 137 135 137s135-62.557 135-137c0-75.909-62.506-135-135.002-135zm53.035 60.753c5.857-5.858 15.355-5.858 21.213 0 5.859 5.859 5.859 15.355 0 21.215-5.858 5.858-15.355 5.858-21.213 0-5.858-5.859-5.858-15.355 0-21.215zM256 180c8.284 0 15 6.714 15 15 0 8.284-6.716 15-15 15s-15-6.716-15-15c0-8.286 6.716-15 15-15zm-90 120c-8.284 0-15-6.716-15-15 0-8.286 6.716-15 15-15s15 6.714 15 15c0 8.284-6.716 15-15 15zm36.967 61.246c-5.858 5.858-15.355 5.858-21.213 0-5.859-5.858-5.859-15.355 0-21.213 5.858-5.858 15.355-5.858 21.213 0 5.858 5.858 5.858 15.355 0 21.213zm0-129.279c-5.858 5.858-15.355 5.858-21.213 0-5.859-5.859-5.859-15.355 0-21.215 5.858-5.858 15.355-5.858 21.213 0 5.858 5.86 5.858 15.356 0 21.215zM256 392c-8.284 0-15-6.716-15-15 0-8.286 6.716-15 15-15s15 6.714 15 15c0 8.284-6.716 15-15 15zm0-60c-24.814 0-45-22.186-45-47s20.186-45 45-45 45 20.186 45 45-20.186 47-45 47zm74.246 29.246c-5.858 5.858-15.355 5.858-21.213 0-5.858-5.858-5.858-15.355 0-21.213 5.858-5.858 15.355-5.858 21.213 0 5.859 5.857 5.859 15.355 0 21.213zM346 300c-8.284 0-15-6.716-15-15 0-8.286 6.716-15 15-15s15 6.714 15 15c0 8.284-6.716 15-15 15zM256 0C191.206 0 128.82 22.295 78.39 62.626l55.164 62.062c13.692 15.388 35.76 18.425 54.858 9.799.531-.24 1.095-.399 1.63-.634C209.581 125.285 232.475 120 256 120c23.338 0 46.764 5.43 66.041 13.892.511.225 1.053.379 1.562.61 19.185 8.578 41.171 5.57 54.829-9.814l55.179-62.062C383.178 22.3 320.794 0 256 0z"fill="#df0708" ></path>
+			<path d="M416.159 127.397l-15.3 17.212c-8.61 9.697-19.435 16.668-31.631 20.691C401.027 195.397 421 237.865 421 285c0 90.981-74.019 167-165 167S91 375.981 91 285c0-47.137 19.975-89.608 51.777-119.705-12.193-4.016-23.026-10.986-31.65-20.685l-15.291-17.205C54.604 169.349 31 225.857 31 285c0 124.072 100.928 227 225 227s225-102.928 225-227c0-59.147-23.608-115.66-64.841-157.603z"></path>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="gearshift">
+			<path d="M473.5 424.763V87.237c17.422-6.213 30-22.707 30-42.237 0-24.814-20.186-45-45-45s-45 20.186-45 45c0 19.53 12.578 36.024 30 42.237V242h-105V87.237c17.422-6.213 30-22.707 30-42.237 0-24.814-20.186-45-45-45s-45 20.186-45 45c0 19.53 12.578 36.024 30 42.237V242h-105V87.237c17.422-6.213 30-22.707 30-42.237 0-24.814-20.186-45-45-45s-45 20.186-45 45c0 19.53 12.578 36.024 30 42.237V242h-90c-8.276 0-15-6.724-15-15V87.237c17.422-6.213 30-22.707 30-42.237 0-24.814-20.186-45-45-45s-45 20.186-45 45c0 19.53 12.578 36.024 30 42.237V227c0 24.814 20.186 45 45 45h90v152.763c-17.422 6.213-30 22.707-30 42.237 0 24.814 20.186 45 45 45s45-20.186 45-45c0-19.53-12.578-36.024-30-42.237V272h105v152.763c-17.422 6.213-30 22.707-30 42.237 0 24.814 20.186 45 45 45s45-20.186 45-45c0-19.53-12.578-36.024-30-42.237V272h105v152.763c-17.422 6.213-30 22.707-30 42.237 0 24.814 20.186 45 45 45s45-20.186 45-45c0-19.53-12.578-36.024-30-42.237z"></path>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.997 48.998" id="car">
+			<path d="M45.961 18.702c-.033-.038-.061-.075-.1-.112l-1.717-1.657c1.424-.323 2.957-1.516 2.957-2.74 0-1.426-1.979-1.932-3.668-1.932-1.766 0-1.971 1.21-1.992 2.065l-4.43-4.271c-.9-.891-2.607-1.592-3.883-1.592h-17.26c-1.275 0-2.981.701-3.882 1.592l-4.429 4.271c-.023-.855-.228-2.065-1.992-2.065-1.691 0-3.669.506-3.669 1.932 0 1.224 1.534 2.417 2.958 2.74L3.137 18.59c-.039.037-.066.074-.1.112C1.2 20.272 0 23.184 0 25.297v6.279c0 1.524.601 2.907 1.572 3.938v2.435c0 1.424 1.192 2.585 2.658 2.585h3.214c1.466 0 2.657-1.159 2.657-2.585v-.623h28.795v.623c0 1.426 1.19 2.585 2.658 2.585h3.213c1.467 0 2.657-1.161 2.657-2.585v-2.435a5.723 5.723 0 0 0 1.572-3.938v-6.279c.002-2.113-1.198-5.025-3.035-6.595zm-32.348-6.749c.623-.519 1.712-.913 2.255-.913H33.13c.543 0 1.632.394 2.255.913l5.809 5.63H7.805l5.808-5.63zM1.993 24.347c0-1.546 1.21-2.801 2.704-2.801 1.493 0 6.372 2.864 6.372 4.41s-4.879 1.188-6.372 1.188c-1.494 0-2.704-1.25-2.704-2.797zm8.109 10.226h-1.03l-3.055.005c-.848-.264-1.446-.572-1.869-.903a2.651 2.651 0 0 1-.506-.514 2.011 2.011 0 0 1-.284-.519c-.38-1.074.405-2.061.405-2.061h5.214l3.476 3.99-2.351.002zm21.894.002H17.002a2.833 2.833 0 0 1-2.832-2.831h20.658a2.832 2.832 0 0 1-2.832 2.831zm.658-4.763h-16.31c-1.7 0-3.08-2.096-3.08-4.681h22.47c0 2.586-1.38 4.681-3.08 4.681zm12.987 2.832a2.025 2.025 0 0 1-.285.518 2.595 2.595 0 0 1-.506.514c-.422.331-1.021.641-1.869.903l-3.055-.005h-3.383l3.478-3.99h5.213c0-.001.786.984.407 2.06zm-1.34-5.5c-1.492 0-6.371.356-6.371-1.188s4.879-4.41 6.371-4.41c1.494 0 2.704 1.255 2.704 2.801 0 1.545-1.21 2.797-2.704 2.797z"></path>
+		</symbol>
+	</svg>
+
+
+
+
+	<div class="request-statusbar hidden"></div>
+	<header class="header">
+		<div class="kavto-container">
+			<nav class="header__nav">
+				<a href="/" class="header__logo">
+					<img src="images/logo.jpg" alt="logo" class="header__logo-img">
+				</a>
+				<ul class="header__list">
+					<li class="header__item"><a href="#about" class="header__link">О НАС</a></li>
+					<li class="header__item"><a href="#services-anchor" class="header__link">УСЛУГИ</a></li>
+					<li class="header__item"><a href="#feedback-anchor" class="header__link">СДЕЛКИ</a></li>
+					<li class="header__item"><a href="#contact" class="header__link">ОСТАВИТЬ ЗАЯВКУ</a></li>
+
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="content">
+		<section class="entry-slider">
+			<div class="entry-slider__container">
+				<div class="entry-slider__wrapper entry-slider__wrapper--first" >
+					<div class="entry-slider__title-wrap">
+						<h1 class="entry-slider__title"><span class="entry-slider__title-highlight">Пригон авто из Европы под ключ!</span></h1>
+						<p class="entry-slider__desc">Поможем Вам пригнать желанный автомобиль без лишних затрат времени и денег!</p>
+					</div>
+				</div>
+
+				<div class="entry-slider__wrapper entry-slider__wrapper--second" >
+					<div class="entry-slider__title-wrap">
+						<h1 class="entry-slider__title"><span class="entry-slider__title-highlight">Все документы берём на себя!</span></h1>
+						<p class="entry-slider__desc">Вам больше не нужно беспокоится о всех документах. Мы с гордостью берем всё на себя!</p>
+					</div>
+				</div>
+				<div class="entry-slider__wrapper entry-slider__wrapper--third" >
+					<div class="entry-slider__title-wrap">
+						<h1 class="entry-slider__title"><span class="entry-slider__title-highlight">Наша команда  выберет Вам свежее авто!</span></h1>
+						<p class="entry-slider__desc">Наша команда специалистов, во главе компании <strong>KAVTO</strong>, поможет Вам выбрать автомобиль в отличном состоянии!</p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="entry-slider__arrows-wrap">
+				<ul class="entry-slider__arrows">
+					<div class="entry-slider__arrow-item-prev">
+						<svg class="icon">
+							<use class="chevron-prev" xlink:href="#left-chevron"></use>
+						</svg>
+					</div>
+					<div class="entry-slider__arrow-item-next">
+						<svg class="icon">
+							<use class ="chevron-next" xlink:href="#right-chevron"></use>
+						</svg>
+					</div>
+				</ul>
+			</div>
+		</section>
+		<section class="about">
+			
+			<div id="about" class="about__head">
+				<div class="kavto-container">
+					<h1 class="about__title">О НАС</h1>
+				</div>
+			</div>
+			<div class="kavto-container">
+				<div class="about__wrap">
+					<div class="about__intro-wrap">
+						<div class="about__intro-img-container">
+							<img src="images/intro.jpg" alt="" class="about__intro-img">
+							<div class="about__intro-img-wrapper">
+								<svg class="about__intro-market-icon">
+									<use xlink:href="#car"></use>
+								</svg>
+								<p class="about__intro-market">АВТОРЫНОК ЕВРОПЫ</p>
+							</div>
+						</div>
+						
+						
+						
+						<div class="about__intro-box">
+							<div class="about__intro-title-wrap">
+								<p class="about__intro-title">KAVTO</p>
+								<p class="about__intro-desc">Быдгощ, Польша</p>
+							</div>
+							<p class="about__intro">С того момента, как закон о льготной расстаможке вступил в силу, наша компания занимается всеми услугами связанными с пригоном авто из Европы! Наш главный офис находится в городе Быдгощ (Польша), дополнительно люди работают в городе Полтава. Работая с нами, Вы сможете зарабатывать больше, качество Вашей работы улучшится в разы и мы поможем Вам максимально оптимизировать Ваши расходы!</p>
+						</div>
+					</div>
+					<div class="about__subtitle-wrap">
+						<h1 class="about__subtitle"><span>ПРЕИМУЩЕСВА АВТО С ЕВРОПЫ</span></h1>
+						<!-- <p class="about__sbutitle-desc">а ведь их достаточно</p> -->
+					</div>
+					
+					<div class="about__boxes row">
+						<div class="about__box col-lg-6 col-md-12" >
+							<svg class="about__icon">
+								<use xlink:href="#engine"></use>
+							</svg>
+							<p class="about__desc">Чем прекрасны автомобили с Европы? Как так получается, что авто с Европы в разы лучше, тех, что эксплуатироваилсь в Укране? Пригнав "евробляху", Вы получаете автомобиль в значительно лучшем состоянии, как техническом, так и визуальном. Почему так? Сейчас мы в этом разберемся.</p>
+						</div>
+						<div class="about__box about__box--dark col-lg-6 col-md-12" >
+							<svg class="about__icon about__icon--white ">
+								<use xlink:href="#break"></use>
+							</svg>
+							<p class="about__desc">Как правило, в Европе условия намного лучше для содержания автомобиля. Вы сами понимаете: наше некачественное топливо, наши ужасные дороги (не все так плохо конечно, но это свою роль играет) по немногу калечат Ваше авто. </p>
+						</div>
+					</div>
+					<div class="about__boxes row">
+						<div class="about__box about__box--dark col-lg-6 col-md-12" >
+							<svg class="about__icon about__icon--white ">
+								<use xlink:href="#gearshift"></use>
+							</svg>
+							<p class="about__desc">Да и в общем, ситуация на рынке позволяет купить машину с реальным пробегом, по этому, если Вы не хотите играть в рулетку, то все же лучше брать европейское авто. </p>
+						</div>
+						<div class="about__box col-lg-6 col-md-12" >
+							<svg class="about__icon">
+								<use xlink:href="#gauge"></use>
+							</svg>
+							<p class="about__desc">За несколько лет пригона авто с Европы теория того, что выгоднее оплатить услуги по пригону авто и растаможить его, чем покупать б/у авто в Украине, стала аксиомой. Каждый клиент, который вместо Ланоса решил пригнать себе Гольфа или Пассата остался доволен </p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+		<section class="services">
+			<div id="services-anchor" class="services__header">
+				<h1 class="services__title">ЧТО МЫ ДЕЛАЕМ?</h1>
+			</div>
+			<div class="services__background">
+				<div class="kavto-container">
+					<div class="services__wrap">
+						<div class="services__block-wrap">
+							<div class="services__block">
+								<h1 class="services__block-title">УСЛУГИ</h1>
+								<p class="services__block-desc">Нашим клиентам мы предоставляем такие услуги:</p>
+								<ul class="services__block-list">
+									<li class="services__block-item">Консультация по любым вопросам связанным с покупкой, выбором, оформлением, доставкой, прохождением границы, сертификацией, оценкой, растаможкой и постановкой на украинский учёт</li>
+									<li class="services__block-item">Тур за aвто в Литву или Германию (встреча Вас в аэропорту или автовокзале, полное сопровождение на собственном авто, помощь при покупке и оформлении документов,консультации и поддержка на всех этапах Вашего пребывания и до регистрации авто в Украине!</li>
+									<li class="services__block-item">Максимально дешёвая, из возможных на сегодня, оценка авто в Украине</li>
+									<li class="services__block-item">Услуги брокера</li>
+									<li class="services__block-item">Доставка авто в Украину автовозом с полным сопровождением от точки в Европе до точки в Украине</li>
+									<li class="services__block-item">Cпециальные и очень интересные условия для дилеров и автобизнесменов!</li>
+
+								</ul>
+							</div>
+							<div class="services__block services__block--right">
+								<h1 class="services__block-title">ЧТО МЫ ПРОВЕРЯЕМ</h1>
+								<p class="services__block-desc">Перед покупкой авто мы проверяем:</p>
+								<ul class="services__block-list">
+									<li class="services__block-item">Кузов на предмет ДТП</li>
+									<li class="services__block-item">Cостояние двигателя</li>
+									<li class="services__block-item">Состояние салона</li>
+									<li class="services__block-item">Родной пробег (Компьютерная диагностика)</li>
+									<li class="services__block-item">Работоспособность электропакета</li>
+									<li class="services__block-item">Наличие скрытых ДТП</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="feedback-anchor" class="services__footer">
+				<h1 class="services__title">СДЕЛКИ</h1>
+			</div>
+
+
+			
+		</section>
+		<section class="feedback">
+			<div class="kavto-container">
+				<div class="feedback__wrap">
+					<h1 class="feedback__title"><span>ПРИГОНЫ ЗА МЕСЯЦ</span></h1>
+					<div class="feedback__slider">
+						<div class="feedback__slider-slide">
+							<div class="feedback__slider-wrap">
+								<div class="feedback__slider-auto-wrap">
+									<img src="images/feedback1.jpg" alt="" class="feedback__slider-auto-img">
+								</div>
+								<div class="feedback__slider-info-wrap">
+									<div class="feedback__slider-name-wrap">
+										
+										<p class="feedback__slider-info-car">PASSAT B5</p>
+										<p class="feedback__slider-info-mileage"><span>168 000</span> KM</p>
+									</div>
+									<p class="feedback__slider-desc">Фото сделано в момент ожидания транзитных номеров на авто для клиента. Клиент заказал предпочтительно бензиновую Шкоду Октавию или Фольксваген Пассат. Нашли Пассат 1.6 2003 года за 1450€ в полностью родной краске, расстаможили его и пригнали клиенту в г.Полтава</p>
+								</div>
+							</div>
+						</div>
+						<div class="feedback__slider-slide">
+							<div class="feedback__slider-wrap">
+								<div class="feedback__slider-auto-wrap">
+									<img src="images/feedback2.jpg" alt="" class="feedback__slider-auto-img">
+								</div>
+								<div class="feedback__slider-info-wrap">
+									<div class="feedback__slider-name-wrap">
+										
+										<p class="feedback__slider-info-car">VECTRA C</p>
+										<p class="feedback__slider-info-mileage"><span>174 000</span> KM</p>
+									</div>
+									<p class="feedback__slider-desc">Одна из наших машин пригнанная и растаможеная в Украину. Опель Вектра С 2007 года. Изначально ехали  в Германию покупать клиенту Шкоду Суперб, но увидили этот вариант, хорошо его осмотрели и приняли решение покупать его. Машинка дизельная, полностью вся в родном окрасе
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="feedback__slider-slide">
+							<div class="feedback__slider-wrap">
+								<div class="feedback__slider-auto-wrap">
+									<img src="images/feedback3.jpg" alt="" class="feedback__slider-auto-img">
+								</div>
+								<div class="feedback__slider-info-wrap">
+									<div class="feedback__slider-name-wrap">
+										
+										<p class="feedback__slider-info-car">PASSAT B5</p>
+										<p class="feedback__slider-info-mileage"><span>197 000</span> KM</p>
+									</div>
+									<p class="feedback__slider-desc">Один из автомобилей, загнанный и растаможеный нами на территории Украины. Фольксваген Пассат 1.9TDI 2001 модельного года. Купили и загнали его в период льготной растаможки. Авто нашли в г.Радом(Польша) и осмотрев его, сразу же приняли совместное с клиентом решение брать именно его. Машина до сих пор ездит у этого владельца в г.Полтава</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<section class="contact">
+			<div id="contact" class="contact__header">
+				<h1 class="contact__title">ОСТАВЬТЕ ЗАЯВКУ!</h1>
+			</div>
+			<div class="contact__wrap">
+				<div class="kavto-container">
+					<p class="contact__call"></p>
+					<p class="contact__desc">Мы расскажем и объясним всё что Вас интересует!</p>
+					<div class="contact__wrapper">
+						<div class="contact__input-wrap">
+							<form action="#" class="contact__form" id="request_form" autocomplete="off">
+								<input type="text" name="name" class="contact__input" placeholder="Ваше имя *" maxlength="20">
+								<input type="tel" pattern="[+380]{4}[0-9]{9}" name="phone_number" maxlength="13" minlength="13" id="phone" required class="contact__input contact__input--telephone" placeholder="Номер телефона *">
+								<span class="contact__error">Это поле должно содержать номер телефона в формате +380XXXXXXXXX</span>
+								<textarea class="contact__input" name="message"  id="message" cols="30" rows="10" maxlength = "300" placeholder="Желанное авто, пробег *"></textarea>
+								<span class="contact__textarea-error">Недопустимые символы: #<$/@</span>
+
+								<button type="submit" name="submit_request" class="contact__button">ОТПРАВИТЬ</button>
+
+							</form>
+						</div>
+						<div class="contact__info-wrap">
+							<h1 class="contact__subtitle">КОНТАКТЫ</h1>
+							<div class="contact__info">
+								<h1 class="contact__info-title">Адрес</h1>
+								<p class="contact__info-value">123 City name, Street, City, Country</p>
+							</div>
+							<div class="contact__info">
+								<h1 class="contact__info-title">Электронная почта</h1>
+								<p class="contact__info-value">cahee@domain.com</p>
+							</div>
+							<div class="contact__info">
+								<h1 class="contact__info-title">Телефон</h1>
+								<p class="contact__info-value">+012 345 6789</p>
+							</div>
+							<h1 class="contact__subtitle">COЦСЕТИ</h1>
+							<div class="contact__social">
+								<ul class="contact__social-list">
+									<li class="contact__social-item">
+										<a href="https://www.instagram.com/avto_prigon_eur/" class="contact__social-link">
+											<img src="images/instagram.png" alt="instagram" class="contact__social-img">
+										</a>
+									</li>
+									<li class="contact__social-item">
+										<a href="#" class="contact__social-link">
+											<img src="images/facebook.png" alt="facebook" class="contact__social-img">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>	
+					</div>	
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<footer class="footer">
+		<div class="kavto-container">
+			<ul class="footer__list">
+				<li class="footer__item">© 2015 KAVTO</li>
+				<li class="footer__item">
+					<a href="#" class="footer__link">
+						<img src="images/logo.jpg" alt="" class="footer__link-img">
+					</a>
+				</li>
+				<li class="footer__item"><cite>"Из всех творений рук человеческих автомобиль <br> больше всего похож на живое существо"</cite></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="js/libs/slick.min.js"></script>
+</body>
+</html>

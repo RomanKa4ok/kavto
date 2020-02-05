@@ -1,0 +1,234 @@
+.contact {
+	&__header {
+		background: $red;
+		padding: 50px 0;
+		position: relative;
+		box-shadow: 0 0 5px 5px rgba(0,0,0,.5);
+		@media (min-height: $width-md) and (max-width: $pro-height) {
+			padding: 35px 0;
+		}
+		@media (max-width: $width-md) {
+			padding: 25px 0;
+		}
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+			padding: 25px 0;
+		}
+	}
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-align: center;
+		color: #fff;
+		@media (max-width: $ipad-height) and (max-height: $ipad-height) {
+			font-size: 2rem;
+		}
+		@media (max-height: $ipad-height) and (max-width: $width-sm) {
+			font-size: 1.3rem;
+		}
+	}
+	&__wrap {
+		padding: 50px 0 100px 0;
+		background: url('../images/contact3.jpg') no-repeat center center;
+		background-size: cover;
+		color: #fff;
+	}
+	&__call {
+		font-size: 3rem;
+		text-align: center;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	&__desc {
+		width: 30%;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 40px;
+		font-style: italic;	
+		@media (max-width: $width-md) and (max-height: $ipad-height) {
+				font-size: 1.3rem;
+				width: 70%;
+			} 
+
+	}
+	&__subtitle {
+		text-align: center;
+		margin-bottom: 30px;
+		font-size: 1.5rem;
+		font-weight: 700;
+
+	}
+	&__social {
+		&-list {
+			display: flex;
+			width: 40%;
+			margin: 0 auto;
+			justify-content: space-between;
+			@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+				width: 65%;
+			}
+
+		}
+		&-item {
+
+		}
+		&-link {
+			text-decoration: none;
+			position: relative;
+			&::after {
+				content: '';
+				width: 100%;
+				background: transparent;
+				@include pos($b:-10px, $l: 0);
+				height: 4px;
+				transition: .3s;
+			}
+			&:hover::after {
+				background: #fff;
+			}
+
+		}
+
+		&-img {
+			@include size(70px);
+			transition: .2s;
+			position: relative;
+			&:hover {
+				transform: scale(1.05);
+			}
+			
+		}
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $width-md) and (max-height: $ipad-height) {
+			flex-direction: column;
+		}
+		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+			padding: 0 10px;
+		} 
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		
+	}
+	&__error {
+		color: transparent;
+		text-align: left;
+		font-size: 12px;
+		display: block;
+		background: transparent;
+		padding: 5px;
+		transition: .2s;
+		pointer-events: none;
+		transform: scaleY(0);
+		transform-origin: 50% 0;
+	}
+	&__textarea-error {
+		@include pos($b:85px, $l: 0);
+		color: $red;
+		text-align: left;
+		font-size: 12px;
+		background: $dark;
+		padding: 5px;
+		transition: .2s;
+		pointer-events: none;
+		width: 100%;
+		transform: scaleY(0);
+		transform-origin: 50% 100%;
+		&--active {
+			transform: scaleY(1);
+		}
+
+	}
+	&__input {
+		margin-bottom: 15px;
+		padding: 20px 15px;
+		background: rgba(223, 7, 8, 0.5);
+		color: #fff;
+		font-size: 1rem; 
+		border-left: 4px solid transparent;
+		transition: .3s;
+		font-family: $font;
+		@media (max-width: $width-md) and (max-height: $ipad-height) {
+			font-size: 1.2rem;
+		}
+		&--telephone {
+			margin-bottom: 0;
+		}
+		&-wrap {
+			width: 45%;
+			@media (max-width: $width-md) and (max-height: $ipad-height) {
+				order: 1;
+				width: 100%;
+			} 
+			
+
+		}
+		&::placeholder {
+			color: rgba(255,255,255, 0.7);
+			font-style: italic;
+			transition: .3s;
+		}
+		&:focus {
+			background: rgba(223, 7, 8, 1);
+			border-color: #fff;
+		}
+		&:focus::placeholder {
+			color: #fff;
+		}
+	}
+	&__info {
+		margin-bottom: 30px;
+		&-wrap {
+			width: 45%;
+			background: rgba(0,0,0,.6);
+			padding: 30px;
+			@media (max-width: $width-md) and (max-height: $ipad-height) {
+				order: 0;
+				width: 100%;
+				margin-bottom: 40px;
+			} 
+		}
+		&-title {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 5px;
+			@media (max-width: $width-md) and (max-height: $ipad-height) {
+				font-size: 1.3rem;
+			} 
+
+		}
+		&-value {
+			opacity: .7;
+			@media (max-width: $width-md) and (max-height: $ipad-height) {
+				font-size: 1.3rem;
+			} 
+		}
+	}
+	&__button {
+		width: 50%;
+		padding: 20px;
+		margin: 0 auto;
+		background: rgba(223, 7, 8, 0.5);
+		cursor: pointer;
+		font-size: 1.5rem;
+		color: #fff;
+		font-weight: 700;
+		transition: .1s;
+		border: 2px solid transparent;
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+				font-size: 1rem;
+			}
+		&:hover {
+			background: rgba(223, 7, 8, 1);
+		}
+		&:active {
+			transform: scale(.98);
+			border: 2px solid #fff;
+		}
+	}
+}

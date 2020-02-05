@@ -1,0 +1,211 @@
+.table  {
+	background: #fff;
+	min-height: calc(100vh - 210px);
+	padding: 30px 20px;
+	border-left: 5px solid #df0708;
+	border-right:5px solid #df0708;
+	position: relative;
+	@media (max-width: $iphonex-landscape + 30px) and (max-height: $width-sm) {
+				min-height: calc(100vh - 55px);
+	}
+	@media (max-width: $width-md) and (max-height: $ipad-height) {
+				min-height: calc(100vh - 115px);
+				padding: 20px 0;
+	}
+	@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+			padding-top: 100px;
+	}
+	
+	&__admin {
+		margin-left: 5px;
+		&-wrap {
+			display: flex;
+			align-items: center;
+			color: $dark;
+			font-weight: 700;
+			font-size: 1.5rem;
+			@include pos($t: 35px, $l: 20px);
+		}
+	}
+	&__exit {
+		background: none;
+		color: #fff;
+		cursor: pointer;
+		font-weight: 700;
+		font-size: 1.5rem;
+		margin-right: 10px;
+		opacity: .8;
+		transition: .2s;
+		&:hover {
+			opacity: 1;
+		}
+		&-form {
+			color: #fff;
+			font-size: 1.5rem;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__title {
+		text-align: center;
+		font-size: 2.5em;
+		font-weight: 700;
+		margin-bottom: 30px;
+		@media (max-width: $ipad-height) and (max-height: $pro-height) {
+				font-size: 2rem;
+				margin-top: 10px;
+		}
+		@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+			display: none;
+		}
+	}
+	&__delete {
+		padding: 10px;
+		font-weight: 700;
+		background: $red;
+		color: #fff;
+		cursor: pointer;
+		opacity: .7;
+		transition: .2s;
+		@include pos($t: 30px, $r: 20px);
+		&:hover {
+			opacity: 1;
+		}
+	}
+	&__wrap {
+		padding: 0 2%;
+	}
+	&__block {
+		color: $dark;
+		display: flex;
+		padding: 10px;
+		position: relative;
+		border-bottom: 2px solid  $dark;
+		transition: .1s;
+		&:hover {
+			border-color:$red;
+		}
+		&-id {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 5%;
+			font-weight: 700;
+			color: $red;
+
+		}
+		&-wrap {
+			display: flex;
+			width: 90%;
+			@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+				flex-direction: column;
+			}
+		}
+		&-phone {
+			width: 20%;
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+			padding: 0 5px;
+			@media (max-width: $width-md) and (max-height: $ipad-height) {
+				font-size: 0.9rem;
+			}
+			@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			@media (max-width: $iphonex-landscape + 30px) and (max-height: $width-sm) {
+				font-size: 0.8rem;
+			}
+		}
+		&-name {
+			width: 25%;
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+			padding: 0 5px;
+			@media (max-width: $width-md) and (max-height: $ipad-height) {
+				font-size: 0.9rem;
+			}
+			@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			@media (max-width: $iphonex-landscape + 30px) and (max-height: $width-sm) {
+				font-size: 0.8rem;
+			}
+		}
+		&-message {
+			width: 50%;
+			text-align: justify;
+			display: flex;
+			align-items: center;
+			padding: 0 5px;
+			@media (max-width: $ipad-height) and (max-height: $pro-height) {
+				width: 50%;
+			}
+			@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+				width: 100%;
+			}
+		}
+	}
+	&__button {
+		&-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			width: 5%;
+
+		}
+		&-delete {
+			@include pos($t: 10px, $r: 10px);
+			cursor: pointer;
+			@include size(15px);
+			font-weight: 900;
+			background: transparent;
+			&:hover {
+				background: #fff;
+			}
+			color: $red;
+			@media (max-height: $pro-height) and (max-width: $ipad-height) {
+				@include size(25px);
+				font-size: 25px;
+				@include pos($t: 0, $r: 0);
+			}
+		}
+		&-mark {
+			@include pos($t: 10px, $r: 30px);
+			cursor: pointer;
+			@include size(15px);
+			color: green;
+			font-weight: 900;
+			background: transparent;
+			&:hover {
+				background: #fff;
+			}
+			@media (max-height: $pro-height) and (max-width: $ipad-height) {
+				@include size(25px);
+				font-size: 25px;
+				@include pos($t: 0, $r: 30px);
+			}
+		}
+		&-blockstatus {
+			color: gold;
+			font-size: 2rem;
+			@media (max-width: $width-sm) and (max-height: $iphonex-landscape + 30px) {
+				@include pos($t:1px, $r: 60px);
+			}
+
+			&--read {
+				display: none;
+			}
+
+		}
+	}
+
+}
+
+.content--table {
+	background: $dark;
+}

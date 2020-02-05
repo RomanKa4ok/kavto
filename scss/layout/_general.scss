@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic');
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+	font-size: 16px;
+	font-family: $font;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.content {
+	height: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+.kavto-container {
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+	@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+		padding: 0;
+	}
+}
+.slick-list {
+	height: 100%;
+}
+.slick-track {
+	height: 100%;
+}
+
+
+.entry-slider__container .slick-dots {
+	bottom: 25px;
+	@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+		bottom: 10px;
+	}
+	&-hover {
+		&:hover {
+			background: #fff;
+		}
+	}
+}
+
+.entry-slider__container .slick-dots li {
+	@include size(20px);
+	background: $dark;
+	border-radius: 50%;
+	border: 3px solid $red;
+	transition: .3s;
+	@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+		@include size(15px);
+	}
+}
+.entry-slider__container .slick-dots li.slick-active {
+	background: $red;
+	pointer-events: none;
+}
+
+.entry-slider__container .slick-arrow {
+	@include size(40px);
+}
+
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+.slick-dots li {
+	&:hover {
+		background: #fff;
+	}
+}
+.feedback__slider .slick-dots li.slick-active {
+
+}
+
+.hidden {
+	display: none;
+}
+
+.chevron-prev {
+	fill: $red;
+	cursor: pointer;
+	transition: .1s;
+	opacity: .5;
+	&:active {
+		fill: #fff;
+	}
+	&:hover {
+		opacity: 1;
+	}
+
+}
+.chevron-next {
+	fill: $red;
+	cursor: pointer;
+	transition: .1s;
+	opacity: .5;
+	&:active {
+		fill: #fff;
+	}
+	&:hover {
+		opacity: 1;
+	}
+}
+.icon {
+	@include size(100px);
+	@media (max-width: $ipad-height) {
+		@include size(60px);
+	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  // border: 1px solid green;
+  -webkit-text-fill-color: $dark;
+  transition: background-color 5000s ease-in-out 0s;
+   -webkit-box-shadow: inset 0 0 0 50px transparent;
+}
+
+input:invalid:not(:placeholder-shown) + .contact__error {
+    color: $red;
+    background: $dark;
+    height: 100%;
+    transform: scaleY(1);
+}
+
+
+
+.no-requests {
+	opacity: .7;
+	@include pos($t: 50%, $l:50%);
+	transform: translateX(-50%);
+
+	font-style: italic;
+}
+.request-statusbar {
+	position: fixed;
+	top: -50px;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 50px;
+	background: rgba(223,7,8,.5);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	&--hidden {
+		display: none;
+	}
+}

@@ -1,0 +1,255 @@
+.about {
+	background: $dark;
+	&__head {
+		background: $red;
+		padding: 50px 0;
+		box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+		position: relative;
+		z-index: 10;
+		@media (min-height: $width-md) and (max-width: $pro-height) {
+			padding: 35px 0;
+		}
+		@media (max-width: $width-md) {
+			padding: 25px 0;
+		}
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+			padding: 25px 0;
+		}
+
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 2.5rem;
+		text-align: center;
+		color: #fff;
+		@media (max-width: $ipad-height) and (max-height: $ipad-height) {
+			font-size: 2rem;
+		}
+		@media (max-height: $ipad-height) and (max-width: $width-sm) {
+			font-size: 1.3rem;
+		}
+		
+	}
+	&__wrap {
+		background: #fff;
+		padding: 50px 5%;
+		border-left: 5px solid $red;
+		border-right: 5px solid $red;
+	}
+	&__intro {
+		font-size: 1.5rem;
+		margin-bottom: 40px;
+		text-align: justify;
+		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+			font-size: 1.2rem;
+		}
+		&-img {
+			width: 100%;
+			// border: 3px solid $dark;
+			box-shadow: 0 10px 10px 1px rgba(0,0,0, 0.5);
+			position: relative;
+			
+			&-container {
+				position: relative;
+				width: 50%;
+				display: flex;
+				margin-bottom: 20px;
+				@media (max-height: $pro-height) and (max-width: $ipad-height) {
+					width: 100%;
+				}
+				
+			}
+
+			&-wrapper {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 20;
+				@include size(100%);
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				transition: .3s;
+				@media (max-height: $pro-height) and (max-width: $ipad-height) {
+						opacity: 0;
+					}
+				&::before {
+					content: '';
+					@include pos($t: 0, $l: 0);
+					background: $red;
+					z-index: 5;
+					width: 100%;
+					height: 100%;
+					opacity: .8;
+					@media (max-height: $pro-height) and (max-width: $ipad-height) {
+						opacity: 0;
+					}
+				}
+				&:hover {
+					opacity: 0;
+				}
+				
+			}
+
+		}
+		&-wrap {
+			display: flex;
+			margin-bottom: 40px;
+			width: 100%;
+			align-items: center;
+			@media (max-height: $pro-height) and (max-width: $ipad-height) {
+				flex-direction: column;
+			}
+		}
+		&-box {
+			text-align: right;
+			padding-left: 40px;
+			width: 50%;
+			@media (max-height: $pro-height) and (max-width: $ipad-height) {
+					padding: 20px;
+					width: 100%;
+			}
+			@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+				padding: 0;
+			}
+
+		}
+		&-market {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #fff;
+			position: relative;
+			z-index: 20;
+			&-icon {
+				@include size(100px);
+				fill: #fff;
+				position: relative;
+				z-index: 20;
+			}
+		}
+		&-title {
+			font-size: 3rem;
+			line-height: 2.5rem;
+			font-weight: 700;
+			
+
+			&-wrap {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 20px;
+				margin-right: 20px;
+				position: relative;
+				&::after {
+					content: '';
+					@include pos($t:0, $r: -20px);
+					background: $red;
+					width: 5px;
+					height: 100%;
+				}
+			}
+		}
+		&-desc {
+			font-style: italic;
+			opacity: .7;
+		}
+	}
+	&__boxes {
+		margin: 0;
+	}
+	&__box {
+		background: #fff;
+		color: $dark;
+		padding: 40px 20px;
+		text-align: center;
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+			border-bottom: 3px solid $red;
+		}
+		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+			padding: 40px 0;
+		}
+		
+		&--dark {
+			background: $dark;
+			color: #fff;
+			border: 3px solid $red;
+			@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+					color: $dark;
+					background: #fff;
+					border: none;
+					border-bottom: 3px solid $red;
+
+			}
+		}
+	}
+	&__icon {
+		fill: $dark;
+		&--white {
+			fill: #fff;
+			@media (max-height: $pro-height) and (max-width: $iphonex-landscape + 30px) {
+				fill: $dark;
+			}
+		}
+	}
+	&__desc {
+		margin-top: 30px;
+		@media (max-width: $pro-height) {
+			font-size: 1.5rem;
+		}
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+				font-size: 1.3rem;
+				text-align: justify;
+			}
+	}
+	&__subtitle {
+		text-align: center;
+		font-size: 2.5em;
+		font-weight: 700;
+		@media (max-width: $ipad-height) and (max-height: $ipad-height) {
+			font-size: 2rem;
+		}
+		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+			font-size: 1.5rem;
+			color: $red;
+		}
+		span {
+			position: relative;
+			&::after {
+				content: 'а ведь их достаточно!';
+				color: $dark;
+				@include pos($b: -8px, $r :0);
+				width: 100%;
+				text-align: right;
+				font-weight: 400;
+				font-style: italic;
+				font-size: 1rem;
+				opacity: .7;
+				@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
+				display: none;
+		}
+
+			}
+			&::before {
+				content: '';
+				width: 5px;
+				background: $red;
+				height: 100%;
+				@include pos($b: -8px, $r : -20px);
+				display: none;
+			}
+		}
+		
+		&-desc {
+			margin-bottom: 40px;
+		}
+		&-wrap {
+			width: 100%;
+			margin: 0 auto;
+			margin-bottom: 60px;
+			@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+

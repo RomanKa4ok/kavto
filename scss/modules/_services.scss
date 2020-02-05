@@ -1,0 +1,129 @@
+.services {
+	background: url('../images/about-new.jpg') no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+	&__header {
+		// background: rgba(223, 7, 8, 0.7);
+		background: -moz-linear-gradient(top, rgba(223,7,8,1) 0%, rgba(223,7,8,0.6) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(223,7,8,1) 0%,rgba(223,7,8,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(223,7,8,1) 0%,rgba(223,7,8,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df0708', endColorstr='#99df0708',GradientType=0 ); /* IE6-9 */
+		padding: 50px 0;
+		box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+		@media (min-height: $width-md) and (max-width: $pro-height) {
+			padding: 35px 0;
+		}
+		@media (max-width: $width-md) {
+			padding: 25px 0;
+		}
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+			padding: 25px 0;
+		}
+
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 2.5rem;
+		color: #fff;
+		text-align: center;
+		@media (max-width: $ipad-height) and (max-height: $ipad-height) {
+			font-size: 2rem;
+		}
+		@media (max-height: $ipad-height) and (max-width: $width-sm) {
+			font-size: 1.3rem;
+		}
+	}
+	&__background {
+		background: rgba(23, 23, 23, .7);
+	}
+	&__wrap {
+		padding: 50px 5% 300px 5%; 
+		position: relative;
+		@media (max-height: $pro-height) and (max-width: $width-md) {
+			padding: 50px 3%;
+		}
+
+	}
+	&__block {
+		width: 45%;
+		background: rgba(0,0,0, .6);
+		color: #fff;
+		padding: 20px 2% 40px;
+		@media (max-height: $pro-height) and (max-width: $width-md) {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+		&--right {
+			@include pos($b:50px, $r: 5%);
+			@media (max-height: $pro-height) and (max-width: $width-md) {
+				position: static;
+			}
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 1.5rem;
+			margin-bottom: 20px;
+			position: relative;
+			text-align: center;
+			@media (max-height: $ipad-height) and (max-width: $width-sm) {
+			font-size: 1.3rem;
+		}
+			&::after {
+				content: '';
+				background: $red;
+				width: 100%;
+				height: 3px;
+				@include pos($b: -10px, $l:0);
+			}
+		}
+		&-wrap {
+			display: flex;
+			justify-content: flex-start;
+			@media (max-height: $pro-height) and (max-width: $width-md) {
+				flex-direction: column;
+			}
+		}
+		&-desc {
+			margin-bottom: 10px;
+			opacity: .8;
+			font-size: 1.1rem;
+		}
+		&-list {
+
+
+		}
+		&-item {
+			margin-left: 20px;
+			margin-bottom: 10px;
+			position: relative;
+			line-height: 1.2rem;
+
+			&::before {
+				content: '';
+				@include size(10px);
+				background: $red;
+				@include pos($t:3px, $l: -15px);
+				border-radius: 50%;
+			}
+			
+		}
+	}
+	&__footer {
+		padding: 50px 0;
+		position: relative;
+		box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.5);
+		background: -moz-linear-gradient(top, rgba(223,7,8,0.6) 0%, rgba(223,7,8,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(223,7,8,0.6) 0%,rgba(223,7,8,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(223,7,8,0.6) 0%,rgba(223,7,8,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99df0708', endColorstr='#df0708',GradientType=0 ); /* IE6-9 */
+		@media (min-height: $width-md) and (max-width: $pro-height) {
+			padding: 35px 0;
+		}
+		@media (max-width: $width-md) {
+			padding: 25px 0;
+		}
+		@media (max-height: $ipad-height) and (max-width: $iphonex-landscape + 30px) {
+			padding: 25px 0;
+		}
+	}
+}
