@@ -71,6 +71,9 @@
 			@media (max-height: $ipad-height) and (max-width: $width-sm) {
 				flex-direction: column;
 			}
+			@media (max-width: $ipad-height) {
+				padding: 0 10px;
+			}
 		}
 		&-auto-wrap {
 			width: 35%;
@@ -78,6 +81,11 @@
 				width: 100%;
 				margin-bottom: 30px;
 			}
+			@media (max-width: $iphonex-landscape + 30px) and (max-height: $width-sm) {
+				display: flex;
+				align-items: center;
+			}
+			
 
 		}
 		&-auto-img {
