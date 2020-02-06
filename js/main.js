@@ -8,9 +8,11 @@
             draggable: false,
             autoplay: true,
             dots: true,
-            speed: 600,
-            autoplaySpeed: 2000,
+            speed: 1000,
+            autoplaySpeed: 6000,
             infinite: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
             prevArrow: $('.chevron-prev'),
             nextArrow: $('.chevron-next')
         });

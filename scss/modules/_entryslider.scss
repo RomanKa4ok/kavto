@@ -162,36 +162,18 @@
 	&__arrow {
 		&-item-prev {
 			@include pos($t:50%, $l: 0);
-			// @media (min-height: $pro-height) and (max-width: $ipad-height) {
-			// 	@include pos($t:25%, $l: 0);
-			// }
-			// @media (min-height: $ipad-height) and (max-width: $width-md) {
-			// 	@include pos($t:25%, $l: 0);
-			// }
-			@media (max-height: $pro-height) and (max-width: $width-md) {
-			@include pos($t:25%, $l: 0);
-			}
-			@media (max-height: 320px) and (max-width: 568px) {
-			@include pos($t:50%, $l:0)
+			@media (max-width: $pro-height) {
+				display: none;
 			}
 
 		}
 		&-item-next {
 			@include pos($t:50%, $r: 0);
-			// @media (min-height: $pro-height) and (max-width: $ipad-height) {
-			// 	@include pos($t:25%, $r: 0);
-				
-			// }
-			// @media (min-height: $ipad-height) and (max-width: $width-md) {
-				
-				
-			// }
-			@media (max-height: $pro-height) and (max-width: $width-md) {
-			@include pos($t:25%, $r: 0);
-			}
-			@media (max-height: 320px) and (max-width: 568px) {
-			@include pos($t:50%, $r:0)
+			@media (max-width: $pro-height) {
+				display: none;
 			}
 		}
+
+		
 	}
 }
