@@ -15,6 +15,9 @@
 		@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
 			height: 40vh;
 		}
+		@media (max-height: 320px) and (max-width: 568px) {
+			height: 84vh;
+		}
 		
 
 
@@ -168,6 +171,10 @@
 			@media (max-height: $pro-height) and (max-width: $width-md) {
 			@include pos($t:25%, $l: 0);
 			}
+			@media (max-height: 320px) and (max-width: 568px) {
+			@include pos($t:50%, $l:0)
+			}
+
 		}
 		&-item-next {
 			@include pos($t:50%, $r: 0);
@@ -181,6 +188,9 @@
 			// }
 			@media (max-height: $pro-height) and (max-width: $width-md) {
 			@include pos($t:25%, $r: 0);
+			}
+			@media (max-height: 320px) and (max-width: 568px) {
+			@include pos($t:50%, $r:0)
 			}
 		}
 	}
