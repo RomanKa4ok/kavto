@@ -86,10 +86,11 @@
 			width: 80%;
 			border: 3px solid $red;
 			@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
-				width: 100%;
+				width:100%;
+ 				object-fit:cover;
 				padding: 0 10px;
 				border: none;
-				max-height: 45vh;
+
 			}
 		}
 		&-info-wrap {
