@@ -76,8 +76,6 @@
 			width: 35%;
 			@media (max-height: $iphonex-landscape + 30px) and (max-width: $width-sm) {
 				width: 100%;
-				display: flex;
-				justify-content: center;
 				margin-bottom: 30px;
 			}
 
