@@ -54,6 +54,7 @@
 				width: 50%;
 				display: flex;
 				margin-bottom: 20px;
+				padding: 0;
 				@media (max-height: $pro-height) and (max-width: $ipad-height) {
 					width: 100%;
 				}
@@ -95,11 +96,12 @@
 		}
 		&-wrap {
 			display: flex;
-			margin-bottom: 40px;
+			margin: 0 0 40px 0;
 			width: 100%;
 			align-items: center;
+
 			@media (max-height: $pro-height) and (max-width: $ipad-height) {
-				flex-direction: column;
+
 			}
 		}
 		&-box {
