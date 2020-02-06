@@ -67,7 +67,7 @@ function requestStatus(data) {
     }, 300, function() {
         setTimeout(function hideBar() {
             statusBar.animate({
-                top: "-50px",
+                top: "-100px",
             }, 300, function() {
                 statusBar.addClass('request-statusbar--hidden');
             })
