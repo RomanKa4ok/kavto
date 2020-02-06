@@ -21,6 +21,7 @@
             slidesToShow: 1,
             draggable: true,
             dots: true,
+            infinite: false,
         });
         if (window.location.pathname === "/" || window.location.pathname === '')
         {

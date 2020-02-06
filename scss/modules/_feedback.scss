@@ -17,21 +17,21 @@
 				}
 		span {
 			position: relative;
-			&::after {
-				content: 'Последние сделки';
-				color: $dark;
-				@include pos($b: -10px, $r :0);
-				width: 100%;
-				text-align: right;
-				font-weight: 400;
-				font-style: italic;
-				font-size: 1rem;
-				opacity: .7;
-				@media (max-height:$ipad-height) and (max-width: $width-sm) {
+			// &::after {
+			// 	content: 'Последние сделки';
+			// 	color: $dark;
+			// 	@include pos($b: -10px, $r :0);
+			// 	width: 100%;
+			// 	text-align: right;
+			// 	font-weight: 400;
+			// 	font-style: italic;
+			// 	font-size: 1rem;
+			// 	opacity: .7;
+			// 	@media (max-height:$ipad-height) and (max-width: $width-sm) {
 
-				}
+			// 	}
 
-			}
+			// }
 			&::before {
 				content: '';
 				width: 5px;
